@@ -48,10 +48,10 @@ console.log( today )
 //----------------------------------------------------------------------------------
 today = mm + '/' + dd + '/' + yyyy;
 
-// 
-// const fs = require( 'fs' );
-// let files = fs.readdirSync( './../' );
-// console.log( files )
+
+const fs = require( 'fs' );
+let files = fs.readdirSync( './../' );
+console.log( files )
 
 
 
@@ -62,26 +62,30 @@ const Header = ( title, date, temp ) => {
   const header = document.createElement( 'div' )
   const dateEle = document.createElement( 'span' )
   const titleEle = document.createElement( 'h1' )
-  const titleEle = document.createElement( 'span' )
+  const tempEle = document.createElement( 'span' )
 
-  header.classList.add( 'header' )
   dateEle.classList.add( 'date' )
   titleEle.classList.add( 'temp' )
+  tempEle.classList.add( 'title' )
+
+
+
 
   titleEle.textContent = title
   dateEle.textContent = date
   titleEle.textContent = temp
 
+
   header.appendChild( dateEle )
   header.appendChild( titleEle )
-  header.appendChild( titleEle )
+  header.appendChild(tempEle )
 
   return header;
 }
 
 const headerAppender = ( selector ) => {
-  const el = document.querySelector( selector )
-  let header = Header( `Just try not to read this`, `${ today }`, `something weird happened when I tried to use fs.readfile` );
+  const targetEle = document.querySelector( selector )
+  let header = Header( `Just try not to read this`, `${ today }`, `${files}` );
 
   targetEle.appendChild( header )
 

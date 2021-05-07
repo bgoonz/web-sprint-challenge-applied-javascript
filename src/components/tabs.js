@@ -59,4 +59,3 @@ const tabsAppender = ( selector ) => {
 }
 export { Tabs, tabsAppender }
 
-export { Tabs, tabsAppender }
