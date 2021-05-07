@@ -107,7 +107,27 @@ Handlers are a way to run JavaScript code in case of user actions.
 
 >Array.from()
 
-3. What is a component?
+
+> Alternatively :
+
+```js
+
+// Get all buttons as a NodeList
+let btns = document.querySelectorAll('button');
+
+// Convert buttons NodeList to an array
+let btnsArr = Array.prototype.slice.call(btns);
+
+
+```
+
+if for instance we were working with a button element:
+
+
+
+
+
+1. What is a component?
 
 
 
