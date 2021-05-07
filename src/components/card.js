@@ -32,10 +32,7 @@
 // 
 // export { Card, cardAppender }
 // 
-
-
-
-
+// 
 
 
 const Card = ( article ) => {
@@ -101,6 +98,6 @@ const cardAppender = ( selector ) => {
       } );
 
     } )
-    .catch( e => console.error( "failed to get profile info:", e ) )
+    .catch( (e) => console.error( "failed to get profile info:", e ) )
 }
 export { Card, cardAppender }

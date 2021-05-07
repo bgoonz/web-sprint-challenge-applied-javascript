@@ -70,6 +70,12 @@ There are two possible ways to submit this project to Canvas. Lambda Staff will 
 1. Submitting a pull request to merge `<firstName-lastName>` branch into `main`.
 2. Setting up your fork on Github to submit via Codegrade, pushing commits to your `<firstName-lastName>` branch.
 
+## Result:
+
+![result](./result.png)
+
+
+
 ## Interview Questions
 
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
