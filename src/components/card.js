@@ -38,36 +38,36 @@
 const Card = ( article ) => {
   const card = document.createElement( 'div' )
   const cardHeadline = document.createElement( 'div' )
-  const cardAuthorContainer = document.createElement( 'div' )
-  const cardImgContainer = document.createElement( 'div' )
+  const cardAuthorParentEle = document.createElement( 'div' )
+  const cardImgParentEle = document.createElement( 'div' )
   const cardImg = document.createElement( 'img' )
   const cardAuthor = document.createElement( 'span' )
 
   card.classList.add( 'card' )
   cardHeadline.classList.add( 'headline' )
-  cardAuthorContainer.classList.add( 'author' )
-  cardImgContainer.classList.add( 'img-container' )
+  cardAuthorParentEle.classList.add( 'author' )
+  cardImgParentEle.classList.add( 'img-container' )
 
   cardHeadline.textContent = article.headline
   cardImg.src = article.authorPhoto
   cardAuthor.textContent = article.authorName
 
-  card.appendChild( cardHeadline )
-  card.appendChild( cardAuthorContainer )
-  cardAuthorContainer.appendChild( cardImgContainer )
-  cardImgContainer.appendChild( cardImg )
-  cardAuthorContainer.appendChild( cardAuthor )
+  card.appendChild( cardHeadline );
+  card.appendChild( cardAuthorParentEle );
+  cardAuthorParentEle.appendChild( cardImgParentEle );
+  cardImgParentEle.appendChild( cardImg );
+  cardAuthorParentEle.appendChild( cardAuthor );
 
   card.addEventListener( 'click', () => {
-    console.log( article.headline )
+    console.log( article.headline );
   } )
 
-  return card
+  return card;
 
 }
 
 const cardAppender = ( selector ) => {
-  const el = document.querySelector( selector )
+  const el = document.querySelector( selector );
 
   axios.get( `https://lambda-times-api.herokuapp.com/articles` )
     .then( response => {
@@ -98,6 +98,6 @@ const cardAppender = ( selector ) => {
       } );
 
     } )
-    .catch( (e) => console.error( "failed to get profile info:", e ) )
+    .catch( ( e ) => console.error( "failed to get profile info:", e ) )
 }
 export { Card, cardAppender }

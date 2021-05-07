@@ -42,7 +42,7 @@ const Tabs = ( topics ) => {
     topicsParentEle.appendChild( tab )
   } );
 
-  return topicsParentEle
+  return topicsParentEle;
 
 }
 

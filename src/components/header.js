@@ -59,35 +59,35 @@ today = mm + '/' + dd + '/' + yyyy;
 //----------------------------------------------------Actual Implementation---------------------------------------------
 
 const Header = ( title, date, temp ) => {
-  const header = document.createElement( 'div' )
-  const dateEle = document.createElement( 'span' )
-  const titleEle = document.createElement( 'h1' )
-  const tempEle = document.createElement( 'span' )
+  const header = document.createElement( 'div' );
+  const dateEle = document.createElement( 'span' );
+  const titleEle = document.createElement( 'h1' );
+  const tempEle = document.createElement( 'span' );
 
-  dateEle.classList.add( 'date' )
-  titleEle.classList.add( 'temp' )
-  tempEle.classList.add( 'title' )
-
-
+  dateEle.classList.add( 'date' );
+  titleEle.classList.add( 'temp' );
+  tempEle.classList.add( 'title' );
 
 
-  titleEle.textContent = title
-  dateEle.textContent = date
-  titleEle.textContent = temp
 
 
-  header.appendChild( dateEle )
-  header.appendChild( titleEle )
-  header.appendChild(tempEle )
+  titleEle.textContent = title;
+  dateEle.textContent = date;
+  titleEle.textContent = temp;
+
+
+  header.appendChild( dateEle );
+  header.appendChild( titleEle );
+  header.appendChild( tempEle );
 
   return header;
 }
 
 const headerAppender = ( selector ) => {
-  const targetEle = document.querySelector( selector )
+  const targetEle = document.querySelector( selector );
   let header = Header( `Just try not to read this`, `${ today }`, `something weird happened when I tried to use fs.readfile` );
 
-  targetEle.appendChild( header )
+  targetEle.appendChild( header );
 
 
 
