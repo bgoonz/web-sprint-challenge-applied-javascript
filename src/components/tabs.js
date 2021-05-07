@@ -32,22 +32,31 @@
 
 
 const Tabs = ( topics ) => {
-  let topic = document.createElement( "div" )
-  topic.classList.add( "topics" )
+  const topicsParentEle = document.createElement( 'div' )
+  topicsParentEle.classList.add( 'topics' )
 
-  topics.forEach( ( element ) => {
-    let tab = document.createElement( "div" )
-    tab.classList.add( "tab" )
-    tab.textContent = element
-    topic.appendChild( tab )
-  } )
-  return topic
+  topics.forEach( ( topic ) => {
+    const tab = document.createElement( 'div' )
+    tab.classList.add( 'tab' )
+    tab.textContent = topic
+    topicsParentEle.appendChild( tab )
+  } );
+
+  return topicsParentEle
+
 }
 
 const tabsAppender = ( selector ) => {
-  let targetEle = document.querySelector( selector )
-  let tabs = Tabs( [ 'javascript', 'bootstrap', 'technology' ] )
-  targetEle.appendChild( tabs )
+  const el = document.querySelector( selector )
+
+  axios.get( `https://lambda-times-api.herokuapp.com/topics` )
+    .then( response => {
+      console.log( response )
+      const tabs = Tabs( response.data.topics )
+      el.appendChild( tabs )
+    } )
+
 }
+export { Tabs, tabsAppender }
 
 export { Tabs, tabsAppender }

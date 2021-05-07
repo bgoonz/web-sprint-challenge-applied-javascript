@@ -75,7 +75,34 @@ There are two possible ways to submit this project to Canvas. Lambda Staff will 
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. What is the DOM?
+
+>The Document Object Model (DOM) is a programming interface for HTML. It translates the content of an HTML document into a standardized object that functional programming languages like JavaScript can easily access and modify. 
+
+>In order to make use of relationships between elements of a web page, programmers use a data type called an object. Objects are unique from other data types because their purpose is to hold other data. An object contains related pieces of data under a common concept, stored in a hierarchy.
+
+>The DOM represents an entire HTML document as a single object. To create the DOM, the web browser reading the HTML file takes in all its parts, from the root <html> element to the smallest <span> tags, and outputs them as an object that JavaScript understands.
+
+
 2. What is an event?
-3. What is an event listener?
-4. Why would we convert a NodeList into an Array?
-5. What is a component?
+
+> An event is a user driven interaction with a website that is converted into an object to be used to inform the response to said event.
+
+>When the page loads, it is called an event. When the user clicks a button, that click too is an event. 
+
+1. What is an event listener?
+
+An event listener is an object that can handele an event .
+It has a assign a handler ( a function that runs in case of an event.)
+
+Handlers are a way to run JavaScript code in case of user actions.
+
+2. Why would we convert a NodeList into an Array?
+
+
+>Array.from()
+
+3. What is a component?
+
+
+
+>Outside of the context of react, I am not quite sure...  it is anything that keeps your code DRY by creating reusable modules that allow you to avoid repeating lines of code throughout your project. 
