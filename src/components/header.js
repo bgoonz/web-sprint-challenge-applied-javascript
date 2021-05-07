@@ -1,3 +1,14 @@
+/****************************************************************************************************************** */
+
+//I understand that this is the leadup to react and that's why Header is capitalized but in general this will probably sow confusion given that anyone
+//not familliar with react only knows to capitalize classes.........!!!!!
+
+
+/****************************************************************************************************************** */
+
+
+
+
 // const Header = (title, date, temp) => {
 //   // TASK 1
 //   // ---------------------
@@ -23,6 +34,7 @@
 // }
 // 
 // export { Header, headerAppender }
+/****************************************************************************************************************** */
 
 //----------------------------------------------------------------------------------
 //Global vars:
@@ -36,46 +48,46 @@ console.log( today )
 //----------------------------------------------------------------------------------
 today = mm + '/' + dd + '/' + yyyy;
 
-
-const fs = require( 'fs' );
-let files = fs.readdirSync( './../../' );
-console.log(files)
+// 
+// const fs = require( 'fs' );
+// let files = fs.readdirSync( './../' );
+// console.log( files )
 
 
 
 
 //----------------------------------------------------Actual Implementation---------------------------------------------
-  // headerEle.appendChild( date );
-  // headerEle.appendChild( title );
-  // headerEle.appendChild( span );
+
 const Header = ( title, date, temp ) => {
-  let headerEle = document.createElement( "div" );
-  let span = document.createElement( "span" );
-  let date = document.createElement( "span" );
-  let title = document.createElement( "h1" );
+  const header = document.createElement( 'div' )
+  const dateEle = document.createElement( 'span' )
+  const titleEle = document.createElement( 'h1' )
+  const titleEle = document.createElement( 'span' )
 
-  headerEle.classList.add( "header" );
-  date.classList.add( "date" );
-  title.classList.add( "title" );
-  temp.classList.add( "temp" );
+  header.classList.add( 'header' )
+  dateEle.classList.add( 'date' )
+  titleEle.classList.add( 'temp' )
 
-  date.textContent = date;
-  title.textContent = title;
-  temp.textContent = temp;
+  titleEle.textContent = title
+  dateEle.textContent = date
+  titleEle.textContent = temp
 
+  header.appendChild( dateEle )
+  header.appendChild( titleEle )
+  header.appendChild( titleEle )
 
-  listElement.append( date, title, temp );
-  return headerEle;
+  return header;
 }
 
 const headerAppender = ( selector ) => {
+  const el = document.querySelector( selector )
+  let header = Header( `Just try not to read this`, `${ today }`, `something weird happened when I tried to use fs.readfile` );
+
+  targetEle.appendChild( header )
 
 
-  let targetEle = document.querySelector( selector );
-  let header = Header( "Sample Title", "2/12/2021", "I am temporarily a temp" );
-  let header = Header( `Just try not to read this`, `${today}`, `` );
 
-  targetEle.appendChild( header );
+
 
 }
 
